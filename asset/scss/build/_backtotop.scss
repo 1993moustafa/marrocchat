@@ -1,0 +1,40 @@
+.cd-top {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  position: fixed;
+  bottom: 40px;
+  right: 3rem;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: $tall-poppy;
+  visibility: hidden;
+  opacity: 0;
+  border-radius: 100px;
+  text-align: center;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s, background-color 0.3s 0s;
+
+  i {
+    margin-top: 10px;
+    font-size: 40px;
+    color: $white;
+  }
+
+  &.cd-top--show {
+    transition: opacity 0.3s 0s, visibility 0s 0s, background-color 0.3s 0s;
+    visibility: visible;
+    opacity: 0;
+    background: #333;
+  }
+
+  &.cd-top--fade-out {
+    transition: opacity 0.3s 0s, visibility 0s 0s, background-color 0.3s 0s;
+    opacity: 1;
+  }
+
+  &:hover {
+    transition: opacity 0.3s 0s, visibility 0s 0s, background-color 0.3s 0s;
+    background-color: $tall-poppy;
+    opacity: 1;
+  }
+}

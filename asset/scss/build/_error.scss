@@ -1,0 +1,23 @@
+.error {
+  span {
+    border-radius: 100px;
+    padding: 1rem;
+    color: $white;
+    background-color: red;
+  }
+
+  a {
+    color: red;
+    text-decoration: none;
+
+    &:hover {
+      color: black;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    .error-scale {
+      zoom: .4;
+    }
+  }
+}

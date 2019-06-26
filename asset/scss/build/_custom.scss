@@ -1,0 +1,36 @@
+img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.bg-opacity {
+  color: $white;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.fb_iframe_widget_fluid_desktop,
+.fb_iframe_widget_fluid_desktop span,
+.fb_iframe_widget_fluid_desktop iframe {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.wp-block-embed__wrapper {
+  iframe {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+}
+
+.wp-block-video video {
+  width: 100%;
+}
+
+ins.adsbygoogle.adsbygoogle-noablate {
+  margin-top: 66px;
+  z-index: 1 !important;
+}
+
+.google-auto-placed {
+  display: none;
+}

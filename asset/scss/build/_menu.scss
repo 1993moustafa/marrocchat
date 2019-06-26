@@ -1,0 +1,123 @@
+@media only screen and (max-width: 767px) {
+  #slide-navbar-collapse {
+    position: fixed;
+    top: 0;
+    left: 15px;
+    z-index: 99;
+    width: 280px;
+    height: 100%;
+    background-color: #ddd;
+    overflow: auto;
+  }
+  .menu-overlay {
+    display: none;
+    background-color: #000;
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    /* IE7 & 8 */
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 49;
+  }
+}
+
+$dark: #212121;
+$light: #efefef;
+$color: #b3e5fc;
+
+@mixin btn($left, $top) {
+  width: 60px;
+  height: 45px;
+  transition-duration: 0.5s;
+}
+
+@mixin icon($height, $width) {
+  transition-duration: 0.5s;
+  position: absolute;
+  height: 2px;
+  width: 35px;
+  top: 35px;
+  background-color: $dark;
+}
+
+@mixin icon-before($height, $width, $top) {
+  transition-duration: 0.5s;
+  position: absolute;
+  width: 35px;
+  height: 2px;
+  background-color: $dark;
+  content: "";
+  top: $top;
+  left: 0;
+}
+
+@mixin icon-after($height, $width, $top) {
+  transition-duration: 0.5s;
+  position: absolute;
+  width: 35px;
+  height: 2px;
+  background-color: $dark;
+  content: "";
+  top: $top;
+  left: 0;
+}
+
+@mixin icon-circle($height, $width) {
+  transition-duration: 0.5s;
+  position: absolute;
+  height: $height;
+  width: 35px;
+  top: 2px;
+  border-radius: 100%;
+  background: transparent;
+  border: 4px solid black;
+  left: -15px;
+}
+
+.btn14 {
+  @include btn(15px, 400px);
+
+  .icon-circle {
+    @include icon-circle(60px, 60px);
+    &:hover {
+      background: #fff;
+    }
+  }
+
+  .icon {
+    @include icon(4px, 30px);
+    border-radius: 4px;
+
+    &:before {
+      @include icon-before(4px, 30px, -10px);
+    }
+
+    &:after {
+      @include icon-after(4px, 30px, 10px);
+    }
+  }
+
+  &.open {
+    .icon-circle {
+      background: #fff;
+    }
+    .icon {
+      transition-duration: 0.5s;
+      background: transparent;
+
+      &:before {
+        transform: rotateZ(45deg) scaleX(1.25) translate(6.5px, 6.5px);
+      }
+
+      &:after {
+        transform: rotateZ(-45deg) scaleX(1.25) translate(6px, -6px);
+      }
+    }
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}

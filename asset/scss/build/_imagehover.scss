@@ -1,0 +1,109 @@
+.hovai-demo-box-6 {
+  position: relative;
+  height: 200px;
+  transition: all ease 0.5s;
+  overflow: hidden;
+  .icon {
+    img {
+      width: 40px;
+    }
+  }
+}
+
+.hovai-box-details-6,
+.hovai-box-social-6 {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  height: 200px;
+  top: 0;
+}
+
+.hovai-box-image-6 img {
+  width: 100%;
+  transform: scale(1);
+  transition: all ease 0.5s;
+  opacity: 1;
+}
+
+.hovai-demo-box-6:hover .hovai-box-image-6 img {
+  width: 100%;
+  transform: scale(1.1);
+  transition: all ease 0.5s;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.hovai-box-details-6 {
+  right: 0;
+  width: 80%;
+  text-align: center;
+  transition: all ease 0.5s;
+  z-index: 9;
+  transform: scale(0);
+  padding: 20px;
+}
+
+.hovai-demo-box-6:hover .hovai-box-details-6 {
+  transition: all ease 0.5s;
+  transform: scale(1);
+  small {
+    color: $white;
+  }
+}
+
+.hovai-box-social-6 {
+  width: 20%;
+  left: -100%;
+  transition: all ease 0.5s;
+  svg {
+    fill: $white;
+  }
+}
+
+.hovai-box-social-6 span {
+  display: inline-block;
+  text-align: center;
+  font-size: 30px;
+  width: 100%;
+  height: 50px;
+  background: $white;
+  margin-top: 0;
+  line-height: 45px;
+  color: $white;
+}
+
+.hovai-demo-box-6:hover .hovai-box-social-6 {
+  left: 0;
+  transition: all ease 0.5s;
+}
+
+.hovai-box-social-6 span.icon {
+  &.facebook {
+    background: #3b5999;
+    color: $white;
+    transition-delay: 2s;
+  }
+
+  &.twitter {
+    background: #55acee;
+    color: $white;
+    transition-delay: 3s;
+  }
+
+  &.whatsapp {
+    background: #10d562;
+    color: $white;
+    transition-delay: 3s;
+  }
+
+  &.google-plus {
+    background: #dd4b39;
+    color: $white;
+    transition-delay: 4s;
+  }
+  &.linkedin {
+    background: #0076b5;
+    color: $white;
+    transition-delay: 4s;
+  }
+}

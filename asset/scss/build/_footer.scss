@@ -1,0 +1,76 @@
+footer {
+  color: $white;
+
+  a {
+    color: $white;
+  }
+
+  .wp-block-image {
+    figure {
+      display: none !important;
+    }
+  }
+
+  .footermenu {
+    a {
+      &:hover {
+        color: $tall-poppy;
+      }
+    }
+
+    li {
+      padding-right: 1rem;
+      border-right: 1px solid $white;
+
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+
+  .footer-logo {
+    width: 100%;
+    height: 75px;
+    background-image: url("asset/images/symbol.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .socialmedia {
+    h5 {
+      font-family: "Norican", cursive;
+    }
+
+    .svg {
+      width: 25px;
+      height: 25px;
+    }
+
+    svg path {
+      fill: $white !important;
+    }
+
+    .icon {
+      background-color: $tall-poppy;
+      padding: 10px;
+      border-radius: 100px;
+
+      &:hover {
+        background-color: $gray-900;
+      }
+
+      @include media-breakpoint-down(lg) {
+        padding: 6px;
+      }
+    }
+  }
+  .copyright {
+    li a {
+      color: $tall-poppy;
+    }
+  }
+  .googleplay,
+  .appstore {
+    width: 91px;
+  }
+}
